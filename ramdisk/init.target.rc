@@ -46,12 +46,6 @@ on post-fs-data
     chmod 0775 /dev/block/platform/dw_mmc.0/by-name
 
 on boot
-# Fingerprint
-    mkdir /dev/validity 0770 system system
-    mkdir /data/validity 0770 system system
-
-# Fingerprint Sensor
-    chown system radio /sys/class/fingerprint/fingerprint/type_check
 
 # Headphones (Headset)
     chown system system /sys/class/input/input12/enabled
@@ -111,7 +105,6 @@ on boot
     chown system radio /sys/class/sensors/grip_sensor/calibration
     chown system radio /sys/class/sensors/grip_sensor/threshold
     chown system radio /sys/class/sensors/grip_sensor/onoff
-<<<<<<< HEAD
 
 # qmuxd
     mkdir /dev/socket/qmux_radio 2777 radio radio
@@ -171,17 +164,6 @@ on boot
     mkdir /data/misc/location/mq 0770 gps gps
     mkdir /data/misc/location/xtwifi 0770 gps gps
 
-# fingerprintd
-service fingerprintd /system/bin/fingerprintd
-    class late_start
-    user system
-    group input
-
-# fingerprintService
-service vcsFPService /system/bin/vcsFPService
-    class late_start
-    user system
-    group system
 
 #service ril-daemon /system/bin/rild
 #    class main
@@ -217,5 +199,3 @@ service vcsFPService /system/bin/vcsFPService
 #    class core
 #    user root
 #    group radio cache inet misc audio sdcard_rw log system
-=======
->>>>>>> 66d64cd... chagallwifi: remove fingerprint leftovers
