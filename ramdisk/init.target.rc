@@ -111,6 +111,7 @@ on boot
     chown system radio /sys/class/sensors/grip_sensor/calibration
     chown system radio /sys/class/sensors/grip_sensor/threshold
     chown system radio /sys/class/sensors/grip_sensor/onoff
+<<<<<<< HEAD
 
 # qmuxd
     mkdir /dev/socket/qmux_radio 2777 radio radio
@@ -216,3 +217,5 @@ service vcsFPService /system/bin/vcsFPService
 #    class core
 #    user root
 #    group radio cache inet misc audio sdcard_rw log system
+=======
+>>>>>>> 66d64cd... chagallwifi: remove fingerprint leftovers
