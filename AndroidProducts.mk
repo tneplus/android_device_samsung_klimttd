@@ -14,4 +14,4 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_che10.mk
+    $(LOCAL_DIR)/lineage_klimttd.mk
